@@ -45,7 +45,13 @@ let offsetY = (CANVAS.height / (CELL_SIZE * zoom) - ROWS) / 2;
 const ABS = Math.floor(-offsetY);
 const ORD = Math.floor(-offsetX);
 
-
+function initGrid(){
+  zoom = 1.4;
+  offsetX = (CANVAS.width / (CELL_SIZE * zoom) - COLS) / 2;
+  offsetY = (CANVAS.height / (CELL_SIZE * zoom) - ROWS) / 2;
+  RANGE_VITESSE.value = 350;
+  RANGE_VITESSE.dispatchEvent(new Event('input'));
+}
 
 function initializerName(){
   initializeLetterI(grid,ABS-3,ORD-5);
@@ -174,6 +180,7 @@ function runGame() {
   NAVIGATION_BUTTONS.forEach(button => {
     button.addEventListener('click', function() {
       grid = createEmptyGrid();
+      initGrid();
       const frameName = button.getAttribute('frame-name');
       frameName === 'my-name' ? initializerName() : initializerRandom(grid);
       displayGrid(grid, CANVAS,zoom,offsetX,offsetY);      
@@ -206,6 +213,7 @@ function runGame() {
   
   RESET_BUTTON.addEventListener('click', function() {
     grid = createEmptyGrid();
+    initGrid();
     displayGrid(grid, CANVAS,zoom,offsetX,offsetY);
     RUN_STOP_CB.checked = false;
     isRunning = false;

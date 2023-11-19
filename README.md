@@ -110,7 +110,7 @@ Pour déplacer le canvas, vous pouvez faire double clic appuyé sur le canvas et
 ## Raccourcis clavier
 
 - `Espace` : Lancer le jeu. Ou le mettre en pause.
-- `r` : Réinitialiser le jeu avec un cadre vide.
+- `r` : Réinitialiser le jeu avec un cadre vide et remettre les valeurs par défaut.
 - `i` : Afficher la fenêtre d'aide.
 - `clic gauche` : Ajouter une cellule vivante.
 - `clic droit` : Afficher la liste des motifs prédéfinis.
