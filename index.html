@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Jeu de la vie de Conway, implémentation en JavaScript.">
+  <meta name="keywords" content="jeu de la vie, conway, javascript">
+  <meta name="author" content="Nabile Sall">
+  <link  href="./css/global.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./favicon.ico" />
+
+  <title>Game Of Life</title>
+  
+  <script type="module" defer src="./js/global.js"></script>
+  <script type="module" defer src="./js/frames/name.js"></script>
+</head>
+<body>
+  <div class="game-content">
+    <select class="select-pattern" id="selectPattern">
+      <option disabled selected value="default" hidden>Sélectionner un pattern</option>
+      <option value="line-animation">Line animation</option>
+      <option value="heart">Coeur</option>
+      <option value="anim-inifinie">Animation inifinie</option>
+      <option value="anim-finie">Animation finie</option> 
+      <option value="canon-planneurs">Canon planeurs</option>
+      <option value="planeur-bottom-right">Planneur(vers en bas-droite)</option>
+      <option value="planeur-top-left">Planneur(vers en haut-gauche)</option>
+      <option value="planeur-top-right">Planneur(vers en haut-droite)</option>
+      <option value="planeur-bottom-left">Planneur(vers en bas-gauche)</option>
+      <option value="hwss">HWSS</option>
+      <option value="turn-signal">Clignotant</option>
+      <option value="phare">Phare</option>
+      <option value="eater">Mangeur</option>
+      <option value="bloc">Bloc</option>
+    </select>
+    
+    <canvas class="canvas-game hide-canvas" id="canvasGame" width="1050" height="600"></canvas>
+    <div class="modal-game hide-modal" id="modalGame">
+      <div class="modal-container">
+
+        <h1 class="modal-title">Je deu la vie</h1>
+        <p>Le Jeu de la Vie, créé par le mathématicien britannique John Conway en 1970, est un automate 
+          cellulaire fascinant qui évolue selon des règles simples mais génère une complexité surprenante. 
+          Basé sur un tableau bidimensionnel de cellules pouvant être vivantes ou mortes, le jeu évolue à 
+          chaque itération en suivant des règles basées sur le nombre de voisins vivants d'une cellule. Ces 
+          règles conduisent à l'émergence de motifs intrigants, de structures stables, et même de simulateurs universels. 
+          Conway, décédé en 2020, a laissé un héritage durable avec le Jeu de la Vie, devenu emblématique en informatique, 
+          en mathématiques récréatives et en explorations des systèmes dynamiques. Son œuvre a influencé divers domaines, 
+          illustrant la beauté et la complexité qui peuvent découler de règles simples dans un monde numérique.</p>
+
+        <h2 class="modal-subtitle">Règles du jeu</h2>
+        <p>Le jeu de la vie est un automate cellulaire, c'est-à-dire un modèle mathématique pour un système dynamique 
+          qui évolue dans le temps en fonction d'un ensemble de règles simples. Il est constitué d'une grille à deux 
+          dimensions de cellules carrées, chacune pouvant être dans l'un des deux états possibles, vivante ou morte. 
+          Chaque cellule interagit avec ses huit voisines, qui sont les cellules directement adjacentes horizontalement, 
+          verticalement ou en diagonale. À chaque étape de temps, les transitions suivantes se produisent :</p>
+        <ul>
+          <li>Toute cellule vivante avec moins de deux voisins vivants meurt, comme si par sous-population.</li>
+          <li>Toute cellule vivante avec deux ou trois voisins vivants vit jusqu'à la prochaine génération.</li>
+          <li>Toute cellule vivante avec plus de trois voisins vivants meurt, comme par surpopulation.</li>
+          <li>Toute cellule morte avec exactement trois voisins vivants devient une cellule vivante, comme par reproduction.</li>
+        </ul>
+
+        <h2 class="modal-subtitle">Fonctionnalités / Raccourcis clavier</h2>
+        <p>
+          Par défaut, le jeu est en pause. Pour le lancer, appuyer sur la touche ESPACE. Pour le mettre en pause, appuyer à nouveau sur la touche ESPACE.
+          Le cadre INS (Idrissa Nabile Sall) est un cadre qui affiche mon nom. Le cadre Aléatoire est un cadre qui affiche un jeu aléatoire. 
+          Pour avoir un cadre vide, il suffit de supprimer le cadre INS ou Aléatoire en cliquant sur le bouton supprimer ou en appuyant sur la touche r.
+        </p> 
+        <ul style="list-style: circle;">
+          <li>Faites un clic droit sur le canvas pour afficher le menu contextuel et ajouter un motif à la postion du souris.</li>
+          <li>Vous pouvez changer la vitese du jeu en utilisant le slider ou en appuyant sur les touches up et down.</li>
+          <li>Vous pouvez ajouter une cellule vivante en cliquant sur une cellule du canvas.</li>
+          <li>Vous pouvez supprimer une cellule vivante en cliquant sur une cellule vivante du canvas.</li>
+          <li>Vous pouvez dessiner sur le canvas en maintenant la touche SHIFT enfoncée et en passant la souris sur le canvas.</li>
+          <li>Vous pouvez effacer sur le canvas en maintenant la touche ALT enfoncée et en passant la souris sur le canvas.</li>
+        </ul> 
+        <p>
+          Il est possible de zoomer sur le canvas en utilisant la molette de la souris.
+          Vous pouvez également déplacer le canvas avec la méthode drag.
+        </p>
+        <ul>
+          <li>ESPACE : Lancer/Arrêter le jeu</li>
+          <li>r : Réinitialiser le jeu</li>
+          <li>up / + : Augmenter la vitesse</li>
+          <li>down / - : Diminuer la vitesse</li>
+          <li>shift + HOVER(souris sur canvas) : Dessiner</li>
+          <li>alt + HOVER(souris sur canvas avec cellule vivante) : Effacer</li>
+          <li>suppr : Supprimer séléction pattern</li>
+          <li>i : Afficher la fenêtre modale</li>
+        </ul>
+
+        <button class="button close-modale" id="closeModale">
+          Lancer le jeu
+        </button>
+
+        <div class="link-navigation">
+          <a class="Btn" href="https://github.com/nabilesall" aria-label="Github" target="_blank">
+            <span class="svgContainer">
+              <svg fill="white" viewBox="0 0 496 512" height="1.6em"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+            </span>
+            <span class="BG"></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="loadingspinner">
+      <div id="square1"></div>
+      <div id="square2"></div>
+      <div id="square3"></div>
+      <div id="square4"></div>
+      <div id="square5"></div>
+    </div>
+  </div>
+
+  <div class="game-footer">
+    <span class="game-title">appuyer sur i : plus d'infos</span> 
+    <div class="PB-range-slider-div">
+      <input type="range" min="50" max="400" value="400" class="PB-range-slider" id="range-vitesse" aria-label="vitesse">
+      <p class="range-slidervalue">400X</p>
+    </div>
+    <div class="action-buttons">
+      <label class="rocker rocker-small">
+        <input type="checkbox" id="run-stop">
+        <span class="switch-left">Run</span>
+        <span class="switch-right">Stop</span>
+      </label>
+      <button id="reset-game">Supprimer</button>
+    </div>
+    
+    <div class="frame-navigation">
+      <button class="navigation-button" frame-name="my-name">INS</button>
+      <button class="navigation-button" frame-name="random-game">Aléatoire</button>
+    </div>
+
+    <div class="link-navigation">
+      <a class="Btn" href="https://github.com/nabilesall" aria-label="Github" target="_blank">
+        <span class="svgContainer">
+          <svg fill="white" viewBox="0 0 496 512" height="1.6em"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+        </span>
+        <span class="BG"></span>
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
