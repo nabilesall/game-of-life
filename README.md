@@ -1,5 +1,7 @@
 # JEU DE LA VIE
 
+[lien vers le site](https://gameoflife.idrissa-sall.com/)
+
 Le Jeu de la Vie, créé par le mathématicien britannique John Conway en 1970, est un automate 
 cellulaire fascinant qui évolue selon des règles simples mais génère une complexité surprenante. 
 Basé sur un tableau bidimensionnel de cellules pouvant être vivantes ou mortes, le jeu évolue à 
@@ -27,16 +29,16 @@ Dans notre contexte les cellules vivantes sont coloriée.
 
 ## Pourquoi ce projet ?
 
-Ce projet a été réalisé dans le cadre d'un challenge de programmation organisé par [Elias W. Bâ](https://github.com/eliaswalyba) 
+Ce projet a été réalisé dans le cadre d'un challenge de programmation organisé par [Elias W. Ba](https://github.com/eliaswalyba) 
 visant à motiver les jeunes de la [#TL221](https://twitter.com/search?q=tl221&src=typed_query) à améliorer leurs compétences en programmation.
 
 ## Comment jouer ?
 
 Il faut lire la présentation du jeu de la vie pour comprendre les règles du jeu et les fonctions implémentées dans ce projet.
-<img src="https://github.com/nabilesall/game-of-life/images/gros-plan.png" alt="Gros plan sur le jeu de la vie" width="100%" height="100%">
+<img src="https://github.com/nabilesall/game-of-life/blob/main/images/gros-plan.png" alt="Gros plan sur le jeu de la vie" width="100%" height="100%">
 
 Par défaut, le jeu et en pause et se lance sur le cadre `INS` (Idrissa Nabile Sall). Pour démarer le jeu, il faut cliquer sur le switch `Run/Stop`. Ou cliquer sur `Espace`. Ce cadre affiche mes initiales avec une particularité sur la lettre N. La ligne oblique de la lettre N est une ligne de cellules vivantes de planneurs produites par un canon à planeurs. Vous pouvez interagir sur ce cadre pour générer d'autres motifs.
-<img src="https://github.com/nabilesall/game-of-life/images/interaction-ins.gif">.  
+<img src="https://github.com/nabilesall/game-of-life/blob/main/images/interaction-ins.gif">
 
 Le cadre `Aléatoire` permet de générer un cadre aléatoire sans motif particulier.  
 Pour avoir un cadre vide, il faut cliquer sur le bouton `Supprimer`.
@@ -44,46 +46,46 @@ Pour avoir un cadre vide, il faut cliquer sur le bouton `Supprimer`.
 ## Fonctionnalités
 
 1- Ajouter une cellule vivante en cliquant sur une cellule morte./ Supprimer une cellule vivante en cliquant sur une cellule vivante.
-<img src="https://github.com/nabilesall/game-of-life/images/add-delete.gif">
+<img src="https://github.com/nabilesall/game-of-life/blob/main/images/add-delete.gif">
 
 2- Dessiner un motif avec la souris. / Effacer un motif avec la souris.
-Pour dessiner un motif avec la souris, il faut sur mettre sur le canvas et enfoncer le bouton `Shift` de votre clavier. Même chose pour effacer un motif mais cette fois-ci avec le bouton `Ctrl` de votre clavier et en déplaçant la souris sur les cellules vivantes à effacer.
-<img src="https://github.com/nabilesall/game-of-life/images/draw.gif">
+Pour dessiner un motif avec la souris, il faut sur mettre sur le canvas et enfoncer le bouton `Shift` de votre clavier. Même chose pour effacer un motif mais cette fois-ci avec le bouton `Ctrl` de votre clavier et en déplaçant la souris sur les cellules vivantes à effacer.  
+<img src="https://github.com/nabilesall/game-of-life/blob/main/images/draw.gif">
 
 3- Ajouter un motif prédéfini.
 Pour ajouter un motif prédéfini, il faut faire un clic droit sur le canvas et choisir le motif à ajouter.
-<img src="https://github.com/nabilesall/game-of-life/images/pattern.png">
+<img src="https://github.com/nabilesall/game-of-life/blob/main/images/pattern.png">
 
 A défaut de dessiner votre propre motif, vous pouvez choisir un motif prédéfini dans la liste ci-dessus.
 Cliquer sur `suppr` pour sortir de cette fonctionnalité.
 
 4- Changer la vitesse du jeu.
 Pour changer la vitesse du jeu, vous pouver utiliser le slider `Speed` ou les boutons `+` et `-`.
-<img src="https://github.com/nabilesall/game-of-life/images/slider-vitesse.png">
+<img src="https://github.com/nabilesall/game-of-life/blob/main/images/slider-vitesse.png">
 
 5- Zoomer et dézoomer sur le canvas.
 Pour zoomer et dézoomer sur le canvas, vous pouvez utiliser la molette de votre souris.
-<img src="https://github.com/nabilesall/game-of-life/images/zoom.gif">
+<img src="https://github.com/nabilesall/game-of-life/blob/main/images/zoom.gif">
 
 Ou `ctrl` + `pavé tactile`(vers le haut ou vers le bas)
 
 6- Déplacer le canvas.
 Pour déplacer le canvas, vous pouvez faire double clic appuyé sur le canvas et déplacer la souris.
-<img src="https://github.com/nabilesall/game-of-life/images/deplacer.gif">
+<img src="https://github.com/nabilesall/game-of-life/blob/main/images/deplacer.gif">
 
 ## Raccourcis clavier
 
-`Espace` : Lancer le jeu. Ou le mettre en pause.
-`r` : Réinitialiser le jeu avec un cadre vide.
-`i` : Afficher la fenêtre d'aide.
-`clic gauche` : Ajouter une cellule vivante.
-`clic droit` : Afficher la liste des motifs prédéfinis.
-`suppr` : Sortir de la liste des motifs prédéfinis.
-`+` ou `flèche du haut` : Augmenter la vitesse du jeu.
-`-` ou `flèche du bas` : Diminuer la vitesse du jeu.
-`Shift` + `deplacement souris sur le canvas` : Dessiner avec la souris sur le canvas.
-`Ctrl` + `deplacement souris sur le canvas` : Effacer avec la souris sur le canvas.
-`Ctrl` + `pavé tactile`(vers le haut ou vers le bas) : Zoomer et dézoomer sur le canvas.
+- `Espace` : Lancer le jeu. Ou le mettre en pause.
+- `r` : Réinitialiser le jeu avec un cadre vide.
+- `i` : Afficher la fenêtre d'aide.
+- `clic gauche` : Ajouter une cellule vivante.
+- `clic droit` : Afficher la liste des motifs prédéfinis.
+- `suppr` : Sortir de la liste des motifs prédéfinis.
+- `+` ou `flèche du haut` : Augmenter la vitesse du jeu.
+- `-` ou `flèche du bas` : Diminuer la vitesse du jeu.
+- `Shift` + `deplacement souris sur le canvas` : Dessiner avec la souris sur le canvas.
+- `Ctrl` + `deplacement souris sur le canvas` : Effacer avec la souris sur le canvas.
+- `Ctrl` + `pavé tactile`(vers le haut ou vers le bas) : Zoomer et dézoomer sur le canvas.
 
 ## Sources
 
