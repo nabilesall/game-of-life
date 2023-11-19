@@ -1,6 +1,6 @@
 # JEU DE LA VIE
 
-[lien vers le site](https://gameoflife.idrissa-sall.com/)
+[Lien vers le site](https://gameoflife.idrissa-sall.com/)
 
 Le Jeu de la Vie, créé par le mathématicien britannique John Conway en 1970, est un automate 
 cellulaire fascinant qui évolue selon des règles simples mais génère une complexité surprenante. 
@@ -10,6 +10,7 @@ règles conduisent à l'émergence de motifs intrigants, de structures stables, 
 Conway, décédé en 2020, a laissé un héritage durable avec le Jeu de la Vie, devenu emblématique en informatique, 
 en mathématiques récréatives et en explorations des systèmes dynamiques. Son œuvre a influencé divers domaines, 
 illustrant la beauté et la complexité qui peuvent découler de règles simples dans un monde numérique.
+
 
 ## Règles du jeu
 
@@ -27,10 +28,31 @@ verticalement ou en diagonale. À chaque étape de temps, les transitions suivan
 
 Dans notre contexte les cellules vivantes sont coloriée.
 
+
 ## Pourquoi ce projet ?
 
 Ce projet a été réalisé dans le cadre d'un challenge de programmation organisé par [Elias W. Ba](https://github.com/eliaswalyba) 
 visant à motiver les jeunes de la [#TL221](https://twitter.com/search?q=tl221&src=typed_query) à améliorer leurs compétences en programmation.
+
+
+## Pourquoi j'ai relevé ce challenge ?
+
+J'ai relevé ce challenge pas parce je voulais prouver des compétences en programmation mais parce que je ne connaissais pas le jeu de la vie.
+En relevant ce challenge, j'ai appris beaucoup de choses sur le jeu de la vie. A ce jour je n'ai pas vu plus beau que le [Game of Life - Universal Turing Machine](https://youtu.be/My8AsV7bA94?si=HGcbhReYfhTq94SD). Je passe beaucoup de mon temps maintenant à essayer de dessiner des motifs sur le jeu de la vie afin de découvrir de nouvelles animations. J'en ai d'ailleurs découvert une que je n'ai pas encore vu sur internet:
+1- Le coeur
+<img src="https://github.com/nabilesall/game-of-life/blob/main/images/motif1.gif">
+
+2- Une animation infinie
+<img src="https://github.com/nabilesall/game-of-life/blob/main/images/motif2.gif">
+
+Je compte y passer encore beaucoup de temps pour découvrir d'autres motifs.
+
+
+## Et après ?
+
+Je compte continuer à améliorer ce projet en ajoutant de nouvelles fonctionnalités. Je compte aussi ajouter une fonctionnalité qui permettra de sauvegarder les motifs dessinés par l'utilisateur.  
+Au cours de me recherches sur le jeu de la vie, j'ai appris qu'on a pas encore trouvé de structures stables avec les cellules suivantes : 16,38 et 41. Je pense que ce serait intéressant de trouver ces structures stables ou au moins essayer de les trouver.
+
 
 ## Comment jouer ?
 
@@ -43,7 +65,11 @@ Par défaut, le jeu et en pause et se lance sur le cadre `INS` (Idrissa Nabile S
 Le cadre `Aléatoire` permet de générer un cadre aléatoire sans motif particulier.  
 Pour avoir un cadre vide, il faut cliquer sur le bouton `Supprimer`.
 
+
 ## Fonctionnalités
+
+Ce jeu est codé en full javascript. Il n'y a pas de librairie utilisée.
+Les principales fonctionnalités implémentées sont les suivantes:
 
 1- Ajouter une cellule vivante en cliquant sur une cellule morte./ Supprimer une cellule vivante en cliquant sur une cellule vivante.
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/add-delete.gif">
@@ -73,6 +99,7 @@ Ou `ctrl` + `pavé tactile`(vers le haut ou vers le bas)
 Pour déplacer le canvas, vous pouvez faire double clic appuyé sur le canvas et déplacer la souris.
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/deplacer.gif">
 
+
 ## Raccourcis clavier
 
 - `Espace` : Lancer le jeu. Ou le mettre en pause.
@@ -87,9 +114,11 @@ Pour déplacer le canvas, vous pouvez faire double clic appuyé sur le canvas et
 - `Ctrl` + `deplacement souris sur le canvas` : Effacer avec la souris sur le canvas.
 - `Ctrl` + `pavé tactile`(vers le haut ou vers le bas) : Zoomer et dézoomer sur le canvas.
 
-## Sources
+
+## Sources et documentation
 
 - [Wikipedia](https://fr.wikipedia.org/wiki/Jeu_de_la_vie)
+- [ScienceEtonnante - YouTube](https://youtu.be/S-W0NX97DB0?si=J-5noBI_l0xqTs0P)
 - [Conway's Game of Life - YouTube](https://youtu.be/R9Plq-D1gEk?si=WQriXhQ668xCjSMs)
 - [Let’s BUILD a COMPUTER in CONWAY's GAME of LIFE ⠠⠵ - YouTube](https://youtu.be/Kk2MH9O4pXY?si=SJT7npnUSH3Gqpgb)
 - [El Jj - Deux (deux ?) minutes pour - YouTube](https://youtu.be/9Hpy6MKM-J8?si=o43eKPTvfbJLDUF4)
