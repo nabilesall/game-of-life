@@ -262,7 +262,7 @@ onkeyup = function(e) {
 
   //i for info-modal
   if(e.code === 'KeyI'){
-    RESET_BUTTON.click();
+    RUN_STOP_CB.checked === true && RUN_STOP_CB.click();
     MODAL_GAME.classList.remove('hide-modal');
     MODAL_GAME.classList.add('show-modal');
     CANVAS.classList.add('hide-canvas');
