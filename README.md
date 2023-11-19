@@ -12,6 +12,13 @@ en mathématiques récréatives et en explorations des systèmes dynamiques. Son
 illustrant la beauté et la complexité qui peuvent découler de règles simples dans un monde numérique.
 
 
+## Installation
+Pour installer le jeu de la vie, il faut cloner le projet sur votre machine. Aucun framework n'est utilisé. QUE DU JAVASCRIPT !!!
+```bash
+git clone https://github.com/nabilesall/game-of-life.git
+```
+
+
 ## Règles du jeu
 
 Le jeu de la vie est un automate cellulaire, c'est-à-dire un modèle mathématique pour un système dynamique 
@@ -51,7 +58,7 @@ Je compte y passer encore beaucoup de temps pour découvrir d'autres motifs.
 ## Et après ?
 
 Je compte continuer à améliorer ce projet en ajoutant de nouvelles fonctionnalités. Je compte aussi ajouter une fonctionnalité qui permettra de sauvegarder les motifs dessinés par l'utilisateur.  
-Au cours de me recherches sur le jeu de la vie, j'ai appris qu'on a pas encore trouvé de structures stables avec les cellules suivantes : 16,38 et 41. Je pense que ce serait intéressant de trouver ces structures stables ou au moins essayer de les trouver.
+Au cours de mes recherches sur le jeu de la vie, j'ai appris qu'on a pas encore trouvé de structures stables avec les cellules suivantes : 16,38 et 41. Je pense que ce serait intéressant de trouver ces structures stables ou au moins essayer de les trouver.
 
 
 ## Comment jouer ?
