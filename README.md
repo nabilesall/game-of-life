@@ -38,11 +38,11 @@ visant à motiver les jeunes de la [#TL221](https://twitter.com/search?q=tl221&s
 ## Pourquoi j'ai relevé ce challenge ?
 
 J'ai relevé ce challenge pas parce je voulais prouver des compétences en programmation mais parce que je ne connaissais pas le jeu de la vie.
-En relevant ce challenge, j'ai appris beaucoup de choses sur le jeu de la vie. A ce jour je n'ai pas vu plus beau que le [Game of Life - Universal Turing Machine](https://youtu.be/My8AsV7bA94?si=HGcbhReYfhTq94SD). Je passe beaucoup de mon temps maintenant à essayer de dessiner des motifs sur le jeu de la vie afin de découvrir de nouvelles animations. J'en ai d'ailleurs découvert une que je n'ai pas encore vu sur internet:
-1- Le coeur
+En relevant ce challenge, j'ai appris beaucoup de choses sur le jeu de la vie. A ce jour je n'ai pas vu plus beau que le [Game of Life - Universal Turing Machine](https://youtu.be/My8AsV7bA94?si=HGcbhReYfhTq94SD). Je passe beaucoup de mon temps maintenant à essayer de dessiner des motifs sur le jeu de la vie afin de découvrir de nouvelles animations. J'en ai d'ailleurs découvert deux que je n'ai pas encore vu sur internet:  
+1- Le coeur  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/motif1.gif">
 
-2- Une animation infinie
+2- Une animation infinie  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/motif2.gif">
 
 Je compte y passer encore beaucoup de temps pour découvrir d'autres motifs.
@@ -56,10 +56,10 @@ Au cours de me recherches sur le jeu de la vie, j'ai appris qu'on a pas encore t
 
 ## Comment jouer ?
 
-Il faut lire la présentation du jeu de la vie pour comprendre les règles du jeu et les fonctions implémentées dans ce projet.
+Il faut lire la présentation du jeu de la vie pour comprendre les règles du jeu et les fonctions implémentées dans ce projet.  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/gros-plan.png" alt="Gros plan sur le jeu de la vie" width="100%" height="100%">
 
-Par défaut, le jeu et en pause et se lance sur le cadre `INS` (Idrissa Nabile Sall). Pour démarer le jeu, il faut cliquer sur le switch `Run/Stop`. Ou cliquer sur `Espace`. Ce cadre affiche mes initiales avec une particularité sur la lettre N. La ligne oblique de la lettre N est une ligne de cellules vivantes de planneurs produites par un canon à planeurs. Vous pouvez interagir sur ce cadre pour générer d'autres motifs.
+Par défaut, le jeu et en pause et se lance sur le cadre `INS` (Idrissa Nabile Sall). Pour démarer le jeu, il faut cliquer sur le switch `Run/Stop`. Ou cliquer sur `Espace`. Ce cadre affiche mes initiales avec une particularité sur la lettre N. La ligne oblique de la lettre N est une ligne de cellules vivantes de planneurs produites par un canon à planeurs. Vous pouvez interagir sur ce cadre pour générer d'autres motifs.  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/interaction-ins.gif">
 
 Le cadre `Aléatoire` permet de générer un cadre aléatoire sans motif particulier.  
@@ -71,7 +71,7 @@ Pour avoir un cadre vide, il faut cliquer sur le bouton `Supprimer`.
 Ce jeu est codé en full javascript. Il n'y a pas de librairie utilisée.
 Les principales fonctionnalités implémentées sont les suivantes:
 
-1- Ajouter une cellule vivante en cliquant sur une cellule morte./ Supprimer une cellule vivante en cliquant sur une cellule vivante.
+1- Ajouter une cellule vivante en cliquant sur une cellule morte./ Supprimer une cellule vivante en cliquant sur une cellule vivante.  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/add-delete.gif">
 
 2- Dessiner un motif avec la souris. / Effacer un motif avec la souris.
@@ -79,24 +79,24 @@ Pour dessiner un motif avec la souris, il faut sur mettre sur le canvas et enfon
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/draw.gif">
 
 3- Ajouter un motif prédéfini.
-Pour ajouter un motif prédéfini, il faut faire un clic droit sur le canvas et choisir le motif à ajouter.
+Pour ajouter un motif prédéfini, il faut faire un clic droit sur le canvas et choisir le motif à ajouter.  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/pattern.png">
 
 A défaut de dessiner votre propre motif, vous pouvez choisir un motif prédéfini dans la liste ci-dessus.
 Cliquer sur `suppr` pour sortir de cette fonctionnalité.
 
 4- Changer la vitesse du jeu.
-Pour changer la vitesse du jeu, vous pouver utiliser le slider `Speed` ou les boutons `+` et `-`.
+Pour changer la vitesse du jeu, vous pouver utiliser le slider `Speed` ou les boutons `+` et `-`.  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/slider-vitesse.png">
 
 5- Zoomer et dézoomer sur le canvas.
-Pour zoomer et dézoomer sur le canvas, vous pouvez utiliser la molette de votre souris.
+Pour zoomer et dézoomer sur le canvas, vous pouvez utiliser la molette de votre souris.  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/zoom.gif">
 
 Ou `ctrl` + `pavé tactile`(vers le haut ou vers le bas)
 
 6- Déplacer le canvas.
-Pour déplacer le canvas, vous pouvez faire double clic appuyé sur le canvas et déplacer la souris.
+Pour déplacer le canvas, vous pouvez faire double clic appuyé sur le canvas et déplacer la souris.  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/deplacer.gif">
 
 
