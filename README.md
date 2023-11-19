@@ -38,11 +38,11 @@ visant à motiver les jeunes de la [#TL221](https://twitter.com/search?q=tl221&s
 ## Pourquoi j'ai relevé ce challenge ?
 
 J'ai relevé ce challenge pas parce je voulais prouver des compétences en programmation mais parce que je ne connaissais pas le jeu de la vie.
-En relevant ce challenge, j'ai appris beaucoup de choses sur le jeu de la vie. A ce jour je n'ai pas vu plus beau que le [Game of Life - Universal Turing Machine](https://youtu.be/My8AsV7bA94?si=HGcbhReYfhTq94SD). Je passe beaucoup de mon temps maintenant à essayer de dessiner des motifs sur le jeu de la vie afin de découvrir de nouvelles animations. J'en ai d'ailleurs découvert une que je n'ai pas encore vu sur internet:
-1- Le coeur
+En relevant ce challenge, j'ai appris beaucoup de choses sur le jeu de la vie. A ce jour je n'ai pas vu plus beau que le [Game of Life - Universal Turing Machine](https://youtu.be/My8AsV7bA94?si=HGcbhReYfhTq94SD). Je passe beaucoup de mon temps maintenant à essayer de dessiner des motifs sur le jeu de la vie afin de découvrir de nouvelles animations. J'en ai d'ailleurs découvert une que je n'ai pas encore vu sur internet:  
+1- Le coeur  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/motif1.gif">
 
-2- Une animation infinie
+2- Une animation infinie  
 <img src="https://github.com/nabilesall/game-of-life/blob/main/images/motif2.gif">
 
 Je compte y passer encore beaucoup de temps pour découvrir d'autres motifs.
